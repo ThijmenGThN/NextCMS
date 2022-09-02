@@ -1,0 +1,14 @@
+
+# Bloat
+README.md
+Dockerfile
+.git
+.gitignore
+.dockerignore
+
+# Build & Datastore
+.next
+database.db
+
+# Dependencies
+node_modules

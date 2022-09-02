@@ -7,50 +7,21 @@ const prisma = new PrismaClient()
 // Main async loop
 ;(async () => {
   let password = Math.random().toString(36).slice(2, 12)
-  
-  console.log(`\n-- Administrator Credentials -- \n\n   Username: "admin"\n   Password: "${password}"`)
+  console.log(`\n-- Administrator Credentials --\n\n   Username: "admin"\n   Password: "${password}"`)
 
-  password = await bcrypt.hash(password, 12)
+  // ----- CLEAN -----
 
-  await prisma.user.upsert({
-    where: {username: 'admin'},
-    update: {},
-    create: {
-      username: 'admin',
-      password,
-      permission: 4
-    }
-  })
+  try { 
+    await prisma.user.delete({where: {username: 'admin'}}) 
+  } catch(err) {}
 
-  await prisma.user.upsert({
-    where: {username: 'steve'},
-    update: {},
-    create: {
-      username: 'steve',
-      password,
-      permission: 2
-    }
-  })
+  // ----- USERS -----
 
-  await prisma.user.upsert({
-    where: {username: 'johan'},
-    update: {},
-    create: {
-      username: 'johan',
-      password,
-      permission: 1
-    }
-  })
-
-  await prisma.user.upsert({
-    where: {username: 'tyler'},
-    update: {},
-    create: {
-      username: 'tyler',
-      password,
-      permission: 0
-    }
-  })
+  await prisma.user.create({data: {
+    username: 'admin',
+    password: await bcrypt.hash(password, 12),
+    permission: 4
+  }})
 
   // ----- LOGS -----
 

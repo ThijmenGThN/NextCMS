@@ -112,7 +112,7 @@ export default function AdminUsers(props) {
 
       {
         showModalConfirm ? (
-          <Modal type="confirm" danger timeout={1} confirm="Delete" onClose={() => setShowModalConfirm(false)} onConfirm={userAction.log.delete.confirm}>
+          <Modal type="confirm" danger confirm="Delete" onClose={() => setShowModalConfirm(false)} onConfirm={userAction.log.delete.confirm}>
             <input type="text" disabled value={modalUser} className="mt-2 p-2 bg-neutral-100 w-full rounded" />
             <p className="mt-2 p-2 bg-neutral-100 w-full rounded min-h-[64px]">{modalContext}</p>
           </Modal>

@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## NextCMS
 
-First, run the development server:
+NextCMS is an **C**ontent **M**anagement **S**ystem driven by **[Next.js](https://nextjs.org/)**, it has been built from the groud up to serve as a template to build apps with ease that are in need of an administered and interactable website.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> <p align="center">
+>   <img height="300" src="http://cdn.thijmenheuvelink.nl/github-nextcms-assets-login">
+>   <img height="300" src="http://cdn.thijmenheuvelink.nl/github-nextcms-assets-users">
+> </p>
+> [ALT]: NextCMS interface login and users preview.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Make sure you've installed **[Docker](https://www.docker.com)**.
+2. Rename `/.env-template` to `/.env` or make your own `/.env` file.
+3. Change the `/.env` file accordingly.
+4. Run: `docker build -t nextcms .`
+5. Run: `docker run --name NextCMS -p 3000:3000 -d nextcms`
+> 6. Generate an admin password: `docker exec NextCMS npx prisma db seed`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+_NextCMS is now accessible at http://0.0.0.0:3000._
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Roles
+Level | Name | Can Login | Edit Users
+-|-|-|-
+4 | Administrator | Yes | Yes
+3 | Moderator | Yes | Yes
+2 | Viewer | Yes | No
+1 | Unprivileged | No | No
