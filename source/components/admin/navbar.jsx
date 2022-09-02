@@ -14,7 +14,7 @@ export default function adminNavBar() {
         <div className="container mx-auto flex">
           <div className="p-4 flex">
             <p className="text-2xl">Next CMS</p>
-            <p className="text-sm mx-2">1.0.0</p>
+            <p className="text-sm mx-2">1.0.1</p>
           </div>
 
           <button className="ml-auto px-4 text-right hover:bg-neutral-100 flex gap-4" onClick={() => setShowModal(true)}>
