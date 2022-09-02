@@ -4,8 +4,8 @@
 NextCMS is an **C**ontent **M**anagement **S**ystem driven by **[Next.js](https://nextjs.org/)**, it has been built from the groud up to serve as a template to build apps with ease that are in need of an administered and interactable website.
 
 > <p align="center">
->   <img width="50%" src="http://cdn.thijmenheuvelink.nl/github-nextcms-assets-login">
->   <img width="50%" src="http://cdn.thijmenheuvelink.nl/github-nextcms-assets-users">
+>   <img width="40%" src="http://cdn.thijmenheuvelink.nl/github-nextcms-assets-login">
+>   <img width="40%" src="http://cdn.thijmenheuvelink.nl/github-nextcms-assets-users">
 > </p>
 > [ALT]: NextCMS interface login and users preview.
 
