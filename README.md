@@ -13,12 +13,12 @@ NextCMS is an **C**ontent **M**anagement **S**ystem driven by **[Next.js](https:
 
 1. Make sure you've installed **[Docker](https://www.docker.com)**.
 2. Rename `/.env-template` to `/.env` or make your own `/.env` file.
-3. Change the `/.env` file accordingly.
+3. Change the contents of the file `/.env` accordingly.
 4. Run: `docker build -t nextcms .`
 5. Run: `docker run --name NextCMS -p 3000:3000 -d nextcms`
-> 6. Generate an admin password: `docker exec NextCMS npx prisma db seed`
+6. Populate the database: `docker exec NextCMS npx prisma db seed`
 
-_NextCMS is now accessible at http://0.0.0.0:3000._
+_NextCMS should now be accessible at http://0.0.0.0:3000._
 
 ### Roles
 Level | Name | Can Login | Edit Users
