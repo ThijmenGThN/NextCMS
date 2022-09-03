@@ -27,3 +27,12 @@ Level | Name | Can Login | Edit Users
 3 | Moderator | Yes | Yes
 2 | Viewer | Yes | No
 1 | Unprivileged | No | No
+
+### Dev Cmds
+Command | Description | requires
+-|-|-
+`npm start` | Production / Deployment | `npm run build`
+`npm run dev` | Use this for development
+`npm run build` | Creates an optimized build
+`npx prisma db push` | Database preparation |
+`npx prisma db seed` | Populate the database | `npx prisma db push`
