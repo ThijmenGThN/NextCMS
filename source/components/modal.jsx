@@ -1,8 +1,16 @@
 import { FiX } from 'react-icons/fi'
 import { useState, useEffect } from 'react'
 
+// -- Params
+// title=string
+// type=[confirm]
+// danger=true/false
+
+// -- Events
+// onConfirm=func
+// onClose=func
+
 export default function adminNavBar(props) {
-  console.log(props.timeout)
   const [countDown, setCountDown] = useState(props.timeout === undefined ? 0 : props.timeout)
 
   useEffect(() => {setTimeout(() => countDown > 0 ? setCountDown(countDown - 1) : null, 1000)}, [countDown])

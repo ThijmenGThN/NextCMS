@@ -6,7 +6,7 @@ import { FiTrash, FiEye } from 'react-icons/fi'
 import NavBar from '/source/components/admin/navbar.jsx'
 import Modal from '/source/components/modal.jsx'
 
-export default function AdminUsers(props) {
+export default function AdminUsers() {
   const {data: session, status} = useSession()
 
   const [logs, setLogs] = useState([])
