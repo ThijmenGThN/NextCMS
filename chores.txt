@@ -1,6 +1,4 @@
 
  ~=~ # Chore List # ~=~
 
-
 static props to preload data?
-add error to login page
