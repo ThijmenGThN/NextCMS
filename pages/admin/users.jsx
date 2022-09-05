@@ -103,7 +103,10 @@ export default function AdminUsers() {
           <div className="border-b p-4 flex">
             <p className="my-1">Users</p>
 
-            <button onClick={userAction.add.modal} className="bg-cyan-500 ml-auto hover:bg-cyan-600 py-2 px-3 rounded text-white flex text-sm"><FiUserPlus className="mt-0.5 mr-2 text-base" /> Add User</button>
+            <button onClick={userAction.add.modal} className="bg-cyan-500 ml-auto hover:bg-cyan-600 pt-1.5 px-3 rounded text-white flex text-sm">
+              <FiUserPlus className="mr-2 mt-0.5 text-base" /> 
+              Add User
+            </button>
           </div>
 
           <div className="grid grid-cols-3 text-center text-neutral-500 p-2 text-sm">
