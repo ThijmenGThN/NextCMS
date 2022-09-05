@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import { useState } from 'react'
 import { FiHome } from 'react-icons/fi' 
@@ -20,7 +21,11 @@ export default function Admin() {
 
         <div className="flex gap-2">
           <button onClick={authenticate} className="bg-cyan-500 py-2 w-full text-white rounded hover:bg-cyan-600">Sign in</button>
-          <button onClick={() => window.location.replace('/')} className="text-cyan-500 border-2 rounded border-cyan-500 py-2 px-3 hover:bg-neutral-100 text-xl"><FiHome /></button>
+          <Link href="/">
+            <div className="text-cyan-500 border-2 rounded border-cyan-500 py-2 px-3 hover:bg-neutral-100 text-xl">
+              <FiHome />
+            </div>
+          </Link>
         </div>
       </div>
     </>

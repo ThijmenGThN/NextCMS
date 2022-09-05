@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FiUsers, FiMenu, FiLogOut, FiActivity } from 'react-icons/fi'
 import { useState } from 'react'
 import { signOut, useSession } from 'next-auth/react'
@@ -34,14 +35,18 @@ export default function adminNavBar() {
 
       <div className="border-b">
         <div className="flex container mx-auto text-neutral-500 hover:text-neutral-600 px-2">
-          <button onClick={() => window.location.replace("/admin/users")} className="flex gap-2 py-4 px-2 hover:bg-neutral-100">
-            <FiUsers className="mt-1" /> 
-            Users
-          </button>
-          <button onClick={() => window.location.replace("/admin/logs")} className="flex gap-2 py-4 px-2 hover:bg-neutral-100">
-            <FiActivity className="mt-1" /> 
-            Logs
-          </button>
+          <Link href="/admin/users">
+            <div className="flex gap-2 py-4 px-2 hover:bg-neutral-100">
+              <FiUsers className="mt-1" /> 
+              Users
+            </div>
+          </Link>
+          <Link href="/admin/logs">
+            <div className="flex gap-2 py-4 px-2 hover:bg-neutral-100">
+              <FiActivity className="mt-1" /> 
+              Logs
+            </div>
+          </Link>
         </div>
       </div>
 

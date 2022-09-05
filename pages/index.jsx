@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function index() {
   return (
     <div className="mt-20">
@@ -7,9 +9,11 @@ export default function index() {
           Developed by <span className="text-cyan-500">ThijmenGThN</span>
         </a>
 
-        <button onClick={() => window.location.replace("/admin")} className="text-neutral-500 hover:bg-neutral-300 italic mx-auto mt-4 py-2 px-4 bg-neutral-200 rounded">
-          Sign in as Admin
-        </button>
+        <Link href="/admin">
+          <button className="text-neutral-500 hover:bg-neutral-300 italic mx-auto mt-4 py-2 px-4 bg-neutral-200 rounded">
+            Sign in as Admin
+          </button>
+        </Link>
       </p>
     </div>
   )

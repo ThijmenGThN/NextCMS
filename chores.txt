@@ -1,0 +1,7 @@
+
+ ~=~ # Chore List # ~=~
+
+change button hight on user tab [add user] (pt-1.5)
+version link to release
+static props to preload data?
+add error to login page
